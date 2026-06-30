@@ -9,8 +9,8 @@ from datetime import datetime, timezone
 from typing import Optional
 
 
-TELEGRAM_BOT_TOKEN = os.getenv("", "")
-TELEGRAM_VIP_CHAT_ID = os.getenv("", "")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_VIP_CHAT_ID = os.getenv("TELEGRAM_VIP_CHAT_ID", "")
 TELEGRAM_ENABLED = os.getenv("TELEGRAM_ENABLED", "1").strip().lower() not in {"0", "false", "no", "off"}
 TELEGRAM_TIMEOUT = float(os.getenv("TELEGRAM_TIMEOUT", "8"))
 

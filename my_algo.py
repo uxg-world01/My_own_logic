@@ -12,6 +12,8 @@ import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 from typing import Optional, Tuple, Dict
+from dotenv import load_dotenv
+
 
 # ---------- Broker APIs ----------
 import MetaTrader5 as mt5                     # pip install MetaTrader5
@@ -19,6 +21,7 @@ import ccxt                                  # pip install ccxt
 from telegram_service import send_vip_signal
 
 # ---------- Configuration ----------
+load_dotenv()
 LOG_LEVEL = logging.INFO
 logging.basicConfig(level=LOG_LEVEL, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
